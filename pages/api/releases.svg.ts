@@ -78,7 +78,7 @@ export interface Release {
   body: string
 }
 
-export default (req: NextApiRequest, res: NextApiResponse) => {
+export default (req: NextApiRequest, res: NextApiResponse): void => {
   const baseUrl = 'https://api.github.com/repos'
   const {
     query: { user, repo, gradient },
@@ -94,8 +94,8 @@ export default (req: NextApiRequest, res: NextApiResponse) => {
   }
   const config = {
     headers: {
-      Accept: 'application/vnd.github.v3+json'
-    }
+      Accept: 'application/vnd.github.v3+json',
+    },
   }
   axios
     .get<Release[]>(`${baseUrl}/${user}/${repo}/releases`, config)

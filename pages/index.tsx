@@ -9,8 +9,9 @@ import {
   RepoInfoSelectedGradient,
 } from '../store/repoInfo'
 import * as React from 'react'
+import GithubCorner from 'react-github-corner'
 
-const Home = () => {
+const Home = (): JSX.Element => {
   const user = useRecoilValue(RepoInfoUser)
   const repo = useRecoilValue(RepoInfoRepo)
   const gradient = useRecoilValue(RepoInfoSelectedGradient)
@@ -44,7 +45,6 @@ const Home = () => {
         <link rel="apple-touch-icon" href={'https://i.imgur.com/bZvR3rW.png'} />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
       <main className={styles.main}>
         <h1 className={styles.title}>✨Release Badges Generator✨</h1>
 
@@ -71,6 +71,7 @@ const Home = () => {
           &nbsp; ©tubone24
         </a>
       </footer>
+      <GithubCorner href="https://github.com/tubone24/release-badges-generator" />
     </div>
   )
 }
