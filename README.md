@@ -1,10 +1,11 @@
 # release badge generator
 
-![img](https://i.imgur.com/9RO3PRc.png)
+![img](https://i.imgur.com/0rVzxsc.png)
 
-> Easily create release version batches for GitHub repositories.
+> Easily create release version badges for GitHub repositories.
 
 ![img](https://release-badges-generator.vercel.app/api/releases.svg?user=tubone24&repo=release-badges-generator&gradient=4259f7,8bfaec)
+[![license](https://img.shields.io/github/license/tubone24/release-badges-generator.svg)](LICENSE)
 
 Displays the latest release version of GitHub repositories that are open to the public, if they are managed by GitHub Release.
 
@@ -28,3 +29,7 @@ If you would like to try out the badges briefly, a demo is available at the foll
 <https://release-badges-generator.vercel.app/>
 
 ![img](https://i.imgur.com/YbkLmVK.png)
+
+## License
+
+[MIT © tubone24](LICENSE)
