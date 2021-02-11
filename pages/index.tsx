@@ -18,7 +18,30 @@ const Home = () => {
   return (
     <div className={styles.container}>
       <Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <title>Release Badges Generator</title>
+        <meta property="og:title" content="Release Badges Generator" />
+        <meta
+          property="og:description"
+          content="Easily create release version badges for GitHub repositories."
+        />
+        <meta name="keywords" content="GitHub,Release,Badges" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://release-badges-generator.vercel.app/" />
+        <meta property="og:image" content="https://i.imgur.com/YbkLmVK.png" />
+        <meta property="og:site_name" content="Release Badges Generator" />
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:site" content="@meitante1conan" />
+        <meta name="twitter:url" content="https://release-badges-generator.vercel.app/" />
+        <meta name="twitter:title" content="Release Badges Generator" />
+        <meta
+          name="twitter:description"
+          content="Easily create release version badges for GitHub repositories."
+        />
+        <meta name="twitter:image" content="https://i.imgur.com/YbkLmVK.png" />
+        <meta property="fb:app_id" content="280941406476272" />
+        <link rel="canonical" href="https://release-badges-generator.vercel.app/" />
+        <link rel="apple-touch-icon" href={'https://i.imgur.com/bZvR3rW.png'} />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -26,7 +49,7 @@ const Home = () => {
         <h1 className={styles.title}>✨Release Badges Generator✨</h1>
 
         <p className={styles.description}>
-          Easily create release version batches for GitHub repositories.
+          Easily create release version badges for GitHub repositories.
         </p>
         <br />
         <code className={styles.code}>
