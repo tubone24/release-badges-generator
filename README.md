@@ -12,6 +12,7 @@ Displays the latest release version of GitHub repositories that are open to the 
 ## How to use
 
 Access the below, with setting your GitHub username and repository.
+
 ```
 https://release-badges-generator.vercel.app/api/releases.svg?user=your-name&repo=your-repository
 ```

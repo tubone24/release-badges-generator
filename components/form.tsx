@@ -54,7 +54,7 @@ export const Form: React.FC = () => {
             <label>Colors</label>
             <select onChange={selectGradient}>
               <option value="ff6600,ffe500">Passion🌞</option>
-              <option value="8b9afa,8bd1fa">Cool💎</option>
+              <option value="0000ff,8bd1fa">Cool💎</option>
               <option value="f74278,ffdae0">Cute🌸</option>
             </select>
           </div>
