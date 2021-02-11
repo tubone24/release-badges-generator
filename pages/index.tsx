@@ -30,8 +30,8 @@ const Home = () => {
         </p>
         <br />
         <code className={styles.code}>
-          https://release-badges-generator.vercel.app/releases.svg?user={user}&repo={repo}
-          &gradient=${gradient}
+          https://release-badges-generator.vercel.app/api/releases.svg?user={user}&repo={repo}
+          &gradient={gradient}
         </code>
       </main>
       <img src={resultSvgUrl} alt="result svg" />

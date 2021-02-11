@@ -92,8 +92,13 @@ export default (req: NextApiRequest, res: NextApiResponse) => {
   } else {
     gradients = ['pink', 'F78642']
   }
+  const config = {
+    headers: {
+      Accept: 'application/vnd.github.v3+json'
+    }
+  }
   axios
-    .get<Release[]>(`${baseUrl}/${user}/${repo}/releases`)
+    .get<Release[]>(`${baseUrl}/${user}/${repo}/releases`, config)
     .then((resp) => {
       res.statusCode = 200
       if (resp.data.length === 0) {
