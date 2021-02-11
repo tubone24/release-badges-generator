@@ -7,7 +7,7 @@ export const RepoInfoUser = atom({
 
 export const RepoInfoRepo = atom({
   key: 'repoInfoRepo',
-  default: 'redump',
+  default: 'release-badges-generator',
 })
 
 export const RepoInfoResultSvg = atom({
