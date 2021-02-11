@@ -14,3 +14,9 @@ export const RepoInfoResultSvg = atom({
   key: 'repoInfoResultSvg',
   default: '',
 })
+
+export const RepoInfoSelectedGradient = atom(
+  {
+  key: 'RepoInfoSelectedGradient',
+  default: '4259f7,8bfaec',
+})

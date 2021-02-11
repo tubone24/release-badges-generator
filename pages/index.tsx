@@ -2,12 +2,18 @@ import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import Form from '../components/form'
 import { useRecoilValue } from 'recoil'
-import { RepoInfoUser, RepoInfoRepo, RepoInfoResultSvg } from '../store/repoInfo'
-import * as React from "react";
+import {
+  RepoInfoUser,
+  RepoInfoRepo,
+  RepoInfoResultSvg,
+  RepoInfoSelectedGradient,
+} from '../store/repoInfo'
+import * as React from 'react'
 
 const Home = () => {
   const user = useRecoilValue(RepoInfoUser)
   const repo = useRecoilValue(RepoInfoRepo)
+  const gradient = useRecoilValue(RepoInfoSelectedGradient)
   const resultSvgUrl = useRecoilValue(RepoInfoResultSvg)
   return (
     <div className={styles.container}>
@@ -17,13 +23,14 @@ const Home = () => {
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>Release Badges Generator</h1>
+        <h1 className={styles.title}>✨Release Badges Generator✨</h1>
 
         <p className={styles.description}>
-          This is a Web App to create release version badges of GitHub repositories.
+          Easily create release version batches for GitHub repositories.
         </p>
+        <br />
         <code className={styles.code}>
-          https://xxxx.app/releases.svg?user={user}&repo={repo}&gradient=4259f7,8bfaec
+          https://xxxx.app/releases.svg?user={user}&repo={repo}&gradient=${gradient}
         </code>
       </main>
       <img src={resultSvgUrl} alt="result svg" />
@@ -35,6 +42,9 @@ const Home = () => {
           rel="noopener noreferrer"
         >
           Powered by <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
+        </a>
+        <a href="https://github.com/tubone24" target="_blank" rel="noopener noreferrer">
+          &nbsp; ©tubone24
         </a>
       </footer>
     </div>
