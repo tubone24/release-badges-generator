@@ -80,7 +80,7 @@ export interface Release {
   body: string
 }
 
-export default (req: NextApiRequest, res: NextApiResponse): void => {
+const handler = (req: NextApiRequest, res: NextApiResponse): void => {
   const baseUrl = 'https://api.github.com/repos'
   const {
     query: { user, repo, gradient },
@@ -102,16 +102,16 @@ export default (req: NextApiRequest, res: NextApiResponse): void => {
   axios
     .get<Release[]>(`${baseUrl}/${user}/${repo}/releases`, config)
     .then((resp) => {
-      res.statusCode = 200
       if (resp.data.length === 0) {
-        res.statusCode = 404
         const svgString = gradientBadge({
           subject: 'Release',
           status: 'no tags',
           gradient: ['a6a6a6', 'a6a6a6'],
         })
+        res.statusCode = 404
         res.setHeader('content-type', 'image/svg+xml')
         res.send(svgString)
+        return
       }
       const releases = resp.data.filter((release) => !release.draft)
       if (releases.length !== 0) {
@@ -120,6 +120,7 @@ export default (req: NextApiRequest, res: NextApiResponse): void => {
           status: releases[0].tag_name,
           gradient: gradients,
         })
+        res.statusCode = 200
         res.setHeader('content-type', 'image/svg+xml')
         res.send(svgString)
       } else {
@@ -144,3 +145,5 @@ export default (req: NextApiRequest, res: NextApiResponse): void => {
       res.send(svgString)
     })
 }
+
+export default handler

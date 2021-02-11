@@ -6,6 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "test": "jest",
     "lint": "eslint . --ext .ts,.js,.tsx,.jsx",
     "lint:fix": "eslint --fix . --ext .ts,.js,.tsx,.jsx",
     "format": "prettier --write ."
