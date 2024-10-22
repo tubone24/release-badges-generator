@@ -39,7 +39,7 @@
     "tailwindcss": "npm:@tailwindcss/postcss7-compat"
   },
   "devDependencies": {
-    "@babel/core": "7.12.13",
+    "@babel/core": "7.25.9",
     "@testing-library/react": "11.2.5",
     "@types/jest": "^26.0.20",
     "@types/node": "14.14.25",
