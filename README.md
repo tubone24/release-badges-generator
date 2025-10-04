@@ -4,7 +4,7 @@
 
 > Easily create release version badges for GitHub repositories.
 
-![img](https://release-badges-generator.vercel.app/api/releases.svg?user=tubone24&repo=release-badges-generator&gradient=4259f7,8bfaec)
+[![img](https://release-badges-generator.vercel.app/api/releases.svg?user=tubone24&repo=release-badges-generator&gradient=4259f7,8bfaec)](https://github.com/tubone24/release-badges-generator/releases)
 [![license](https://img.shields.io/github/license/tubone24/release-badges-generator.svg)](LICENSE)
 
 Displays the latest release version of GitHub repositories that are open to the public, if they are managed by GitHub Release.
